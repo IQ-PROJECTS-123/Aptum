@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Aptum.Site" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="font-['Roboto'] bg-slate-50">
+    <form id="form1" runat="server">
+        <!-- Top Contact Bar -->
+<div class="bg-gradient-to-r from-[#0b1220] to-[#111827] text-white text-sm shadow-md py-2">    
+    <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-6">
+                        <a href="#" class="flex items-center gap-2 hover:text-gray-200 transition-colors">
+                            <i class="fas fa-map-marker-alt"></i>Find A Location
+                        </a>
+                       <%-- <a href="tel:+919555580458" class="flex items-center gap-2 hover:text-gray-200 transition-colors">
+                            <i class="fas fa-phone-alt"></i>+91 9555580458
+                        </a>--%>
+                        <a href="mailto:info@aptum.com" class="flex items-center gap-2 hover:text-gray-200 transition-colors">
+                            <i class="fas fa-envelope"></i>info@aptum.com
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="border border-white/30 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white hover:text-orange-500 transition-all">
+                            <i class="fab fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="#" class="border border-white/30 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white hover:text-orange-500 transition-all">
+                            <i class="fab fa-twitter text-xs"></i>
+                        </a>
+                        <a href="#" class="border border-white/30 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white hover:text-orange-500 transition-all">
+                            <i class="fab fa-instagram text-xs"></i>
+                        </a>
+                        <a href="#" class="border border-white/30 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white hover:text-orange-500 transition-all">
+                            <i class="fab fa-linkedin-in text-xs"></i>
+                        </a>
+                        <a href="#" class="border border-white/30 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white hover:text-orange-500 transition-all">
+                            <i class="fab fa-youtube text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="bg-gradient-to-r from-orange-500 text-orange-500 text-white sticky top-0 z-40 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center h-16 relative">
+                    <!-- Logo -->
+ <a href="/" class="flex items-center">
+    <img src="img/aptumlogo.png"
+         class="h-10 md:h-12 w-auto object-cover"
+         alt="Aptum Logo">
+</a>
+                    <!-- Desktop Navigation (Always Visible) -->
+<ul class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 font-semibold text-sm">     
+    <asp:Literal ID="_LiteralNavDesktop" runat="server"></asp:Literal>
+                    </ul>
+
+                      <!-- Right Side -->
+                       <div class="flex items-center ml-auto gap-4">
+
+                    <!-- Search (Desktop Only) -->
+                    <div class="hidden md:block relative">
+                      <input type="text"
+                     placeholder="Search..."
+                       class="w-52 rounded-full border border-gray-300 px-4 py-1.5 text-sm focus:ring-2 focus:ring-orange-500 outline-none" />
+                          <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-orange-400"></i>
+                         </div>
+
+                    <!-- Mobile Toggle -->
+                    <button type="button"id="mobileMenuButton"class="md:hidden p-2 rounded text-white hover:bg-white/10">
+                    <i class="fas fa-bars text-xl"></i>
+                     </button>
+           </div>
+         </div>
+      </div>
+              <!-- MOBILE MENU -->
+<div id="mobileMenu"class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg max-h-[80vh] overflow-y-auto">
+<div class="px-6 py-4 space-y-4">
+          <!-- Mobile Search -->
+          <div class="relative">
+              <input type="text"
+                  placeholder="Search..."
+                  class="w-full rounded-full border border-gray-300 px-5 py-2 text-sm focus:ring-2 focus:ring-orange-500 outline-none" />
+              <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-orange-400"></i>
+          </div>
+
+          <!-- Mobile Navigation -->
+<ul class="flex flex-col gap-2 font-semibold text-gray-800">
+              <asp:Literal ID="_LiteralNavMobile" runat="server"></asp:Literal>
+          </ul>
+
+      </div>
+  </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+      <footer class="bg-[#0b1220] text-gray-300 pt-12">
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 pb-10">
+
+        <!-- COMPANY INFO -->
+        <div>
+            <h1 class="text-white text-2xl font-bold mb-4">
+                Aptum <span class="text-orange-500">Software</span>
+            </h1>
+
+            <p class="text-sm leading-relaxed mb-6">
+                Aptum Software Private Limited builds intelligent digital solutions, AI automation systems, 
+                and scalable enterprise platforms to accelerate business growth.
+            </p>
+
+            <div class="flex gap-4 text-lg">
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-orange-500 transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-orange-500 transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-orange-500 transition"><i class="fab fa-github"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-orange-500 transition"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- SERVICES -->
+        <div>
+            <h3 class="text-white font-semibold mb-4 text-lg">Services</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-orange-400">Web Development</a></li>
+                <li><a href="#" class="hover:text-orange-400">AI & Automation</a></li>
+                <li><a href="#" class="hover:text-orange-400">Cloud Solutions</a></li>
+                <li><a href="#" class="hover:text-orange-400">Enterprise Software</a></li>
+            </ul>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div>
+            <h3 class="text-white font-semibold mb-4 text-lg">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="Default.aspx" class="hover:text-orange-400">Home</a></li>
+                <li><a href="About.apx" class="hover:text-orange-400">About Us</a></li>
+                <li><a href="Services" class="hover:text-orange-400">Services</a></li>
+                <li><a href="Contact.aspx" class="hover:text-orange-400">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div>
+            <h3 class="text-white font-semibold mb-4 text-lg">Contact</h3>
+
+            <div class="space-y-3 text-sm mb-5">
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt text-orange-500"></i>
+    D1-267/268, New Kondli, Mayur Vihar Phase 3, New Delhi, Delhi - 110096
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-envelope text-orange-500"></i>
+                    info@aptum.com
+                </p>
+               <%-- <p class="flex items-center gap-2">
+                    <i class="fas fa-phone text-orange-500"></i>
+                    +91 9555580458
+                </p>--%>
+            </div>
+
+           </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+<!-- 🔧 FIX: Center align -->
+<div class="border-t border-slate-800 bg-[#070e1a] py-4 px-6 text-center text-sm text-gray-400">
+    <p>© 2026 Aptum Software Private Limited | All Rights Reserved.</p>
+</div>       
+
+</footer>
+    </form>
+
+   </body>
+</html>
