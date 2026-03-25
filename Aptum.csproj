@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="APIDevelopment.aspx" />
+    <Content Include="ApplicationMaintenance.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
@@ -82,6 +84,20 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APIDevelopment.aspx.cs">
+      <DependentUpon>APIDevelopment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APIDevelopment.aspx.designer.cs">
+      <DependentUpon>APIDevelopment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationMaintenance.aspx.cs">
+      <DependentUpon>ApplicationMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationMaintenance.aspx.designer.cs">
+      <DependentUpon>ApplicationMaintenance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
