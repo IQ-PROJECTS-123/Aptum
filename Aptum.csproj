@@ -77,9 +77,11 @@
     <Content Include="css\style.css" />
     <Content Include="CustomSoftwareDevelopment.aspx" />
     <Content Include="CyberSecurityDataProtection.aspx" />
+    <Content Include="DataAnalytics.aspx" />
     <Content Include="DataAnalyticsBusinessIntelligence.aspx" />
     <Content Include="DataIntegration.aspx" />
     <Content Include="DataManagement.aspx" />
+    <Content Include="DataScienceEngineering.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ECommerceDevelopment.aspx" />
     <Content Include="img\aptumlogo.png" />
@@ -153,6 +155,13 @@
     <Compile Include="CyberSecurityDataProtection.aspx.designer.cs">
       <DependentUpon>CyberSecurityDataProtection.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataAnalytics.aspx.cs">
+      <DependentUpon>DataAnalytics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataAnalytics.aspx.designer.cs">
+      <DependentUpon>DataAnalytics.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataAnalyticsBusinessIntelligence.aspx.cs">
       <DependentUpon>DataAnalyticsBusinessIntelligence.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,6 +182,13 @@
     </Compile>
     <Compile Include="DataManagement.aspx.designer.cs">
       <DependentUpon>DataManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataScienceEngineering.aspx.cs">
+      <DependentUpon>DataScienceEngineering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataScienceEngineering.aspx.designer.cs">
+      <DependentUpon>DataScienceEngineering.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
