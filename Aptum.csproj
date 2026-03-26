@@ -68,14 +68,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AIMachineLearningSolutions.aspx" />
     <Content Include="APIDevelopment.aspx" />
     <Content Include="ApplicationMaintenance.aspx" />
+    <Content Include="CloudDevOpsServices.aspx" />
+    <Content Include="CloudInfrastructureServices.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="css\style.css" />
+    <Content Include="CustomSoftwareDevelopment.aspx" />
+    <Content Include="CyberSecurityDataProtection.aspx" />
+    <Content Include="DataAnalyticsBusinessIntelligence.aspx" />
+    <Content Include="DataIntegration.aspx" />
+    <Content Include="DataManagement.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="ECommerceDevelopment.aspx" />
     <Content Include="img\aptumlogo.png" />
     <Content Include="img\hero.jpg" />
+    <Content Include="MobileAppDevelopment.aspx" />
+    <Content Include="UIUXDesign.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebApplicationDevelopment.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -84,6 +96,13 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AIMachineLearningSolutions.aspx.cs">
+      <DependentUpon>AIMachineLearningSolutions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AIMachineLearningSolutions.aspx.designer.cs">
+      <DependentUpon>AIMachineLearningSolutions.aspx</DependentUpon>
     </Compile>
     <Compile Include="APIDevelopment.aspx.cs">
       <DependentUpon>APIDevelopment.aspx</DependentUpon>
@@ -99,6 +118,20 @@
     <Compile Include="ApplicationMaintenance.aspx.designer.cs">
       <DependentUpon>ApplicationMaintenance.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CloudDevOpsServices.aspx.cs">
+      <DependentUpon>CloudDevOpsServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CloudDevOpsServices.aspx.designer.cs">
+      <DependentUpon>CloudDevOpsServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CloudInfrastructureServices.aspx.cs">
+      <DependentUpon>CloudInfrastructureServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CloudInfrastructureServices.aspx.designer.cs">
+      <DependentUpon>CloudInfrastructureServices.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,12 +139,61 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomSoftwareDevelopment.aspx.cs">
+      <DependentUpon>CustomSoftwareDevelopment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomSoftwareDevelopment.aspx.designer.cs">
+      <DependentUpon>CustomSoftwareDevelopment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CyberSecurityDataProtection.aspx.cs">
+      <DependentUpon>CyberSecurityDataProtection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CyberSecurityDataProtection.aspx.designer.cs">
+      <DependentUpon>CyberSecurityDataProtection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAnalyticsBusinessIntelligence.aspx.cs">
+      <DependentUpon>DataAnalyticsBusinessIntelligence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataAnalyticsBusinessIntelligence.aspx.designer.cs">
+      <DependentUpon>DataAnalyticsBusinessIntelligence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataIntegration.aspx.cs">
+      <DependentUpon>DataIntegration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataIntegration.aspx.designer.cs">
+      <DependentUpon>DataIntegration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement.aspx.cs">
+      <DependentUpon>DataManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataManagement.aspx.designer.cs">
+      <DependentUpon>DataManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ECommerceDevelopment.aspx.cs">
+      <DependentUpon>ECommerceDevelopment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ECommerceDevelopment.aspx.designer.cs">
+      <DependentUpon>ECommerceDevelopment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileAppDevelopment.aspx.cs">
+      <DependentUpon>MobileAppDevelopment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileAppDevelopment.aspx.designer.cs">
+      <DependentUpon>MobileAppDevelopment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -121,7 +203,21 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="UIUXDesign.aspx.cs">
+      <DependentUpon>UIUXDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIUXDesign.aspx.designer.cs">
+      <DependentUpon>UIUXDesign.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Utility.cs" />
+    <Compile Include="WebApplicationDevelopment.aspx.cs">
+      <DependentUpon>WebApplicationDevelopment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApplicationDevelopment.aspx.designer.cs">
+      <DependentUpon>WebApplicationDevelopment.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
