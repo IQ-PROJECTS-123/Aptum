@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include=".NETMVC.aspx" />
     <Content Include="About.aspx" />
-    <Content Include="AIMachineLearningSolutions.aspx" />
     <Content Include="APIDevelopment.aspx" />
     <Content Include="ApplicationMaintenance.aspx" />
     <Content Include="AWS.aspx" />
@@ -104,7 +103,7 @@
     <Content Include="UIPath.aspx" />
     <Content Include="VMWare.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebApplicationDevelopment.aspx" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include=".NETMVC.aspx.cs">
@@ -120,13 +119,6 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AIMachineLearningSolutions.aspx.cs">
-      <DependentUpon>AIMachineLearningSolutions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AIMachineLearningSolutions.aspx.designer.cs">
-      <DependentUpon>AIMachineLearningSolutions.aspx</DependentUpon>
     </Compile>
     <Compile Include="APIDevelopment.aspx.cs">
       <DependentUpon>APIDevelopment.aspx</DependentUpon>
@@ -353,6 +345,13 @@
     </Compile>
     <Compile Include="VMWare.aspx.designer.cs">
       <DependentUpon>VMWare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
