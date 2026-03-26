@@ -61,7 +61,7 @@
 <div class="flex items-center h-16 relative">
                     <!-- Logo -->
  <a href="/" class="flex items-center">
-    <img src="img/aptumlogo.png"
+    <img src="img/logo.png"
          class="h-10 md:h-12 w-auto object-cover"
          alt="Aptum Logo">
 </a>
