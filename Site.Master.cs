@@ -57,15 +57,15 @@ namespace Aptum
                     {
                         // 🔥 MEGA MENU
                         desktopNav.Append($@"<li class='group'>
-  <button class='flex items-center gap-1 px-4 py-2 text-[15px] font-semibold text-black hover:text-orange-500'>
-  {title} <i class='fas fa-chevron-down text-xs'></i>
-  </button>
+                          <button class='flex items-center gap-1 px-4 py-2 text-[15px] font-semibold text-black hover:text-orange-500'>
+                          {title} <i class='fas fa-chevron-down text-xs'></i>
+                           </button>
 
-  <!-- FULL WIDTH MEGA MENU -->
-  <div class='absolute left-1/2 -translate-x-1/2 top-full w-screen hidden group-hover:block bg-white shadow-xl z-50'>
+                            <!-- FULL WIDTH MEGA MENU -->
+                                <div class='absolute left-1/2 -translate-x-1/2 top-full w-screen hidden group-hover:block bg-white shadow-xl z-50'>
 
-    <div class='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-4 px-10 py-6'>
-");
+                            <div class='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-4 px-10 py-6'>"
+                            );
 
                         foreach (DataRow child in children)
                         {
@@ -73,7 +73,7 @@ namespace Aptum
                             string childUrl = child["Navurl"].ToString();
 
                             desktopNav.Append($@"
-                         <div>
+                              <div>
                               <a href='/{childUrl}' 
                              class='flex items-start gap-3 p-3 rounded hover:bg-orange-50 hover:text-orange-500 transition'>
 
