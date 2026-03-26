@@ -131,8 +131,7 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="rounded-2xl overflow-hidden shadow-xl">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.8233240183995!2d77.32939527457174!3d28.6050765853287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45e936dcdcf%3A0x5cc32ab8482e2a5b!2sIQ-India%20%7C%20A%20New%20Way%20To%20Learn%20Together!5e0!3m2!1sen!2sin!4v1774264540844!5m2!1sen!2sin"
-                class="w-full h-[400px] border-0">
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218.9253702555525!2d77.33178701251744!3d28.60559848468961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4e1f8ac77cd%3A0x4503c03e90c418dc!2sD1%2F338%2C%20Block%20D%2C%20New%20Kondli%2C%20Kondli%2C%20New%20Delhi%2C%20Delhi%2C%20110096!5e0!3m2!1sen!2sin!4v1774342050726!5m2!1sen!2sin"                class="w-full h-[400px] border-0">
             </iframe>
         </div>
     </div>

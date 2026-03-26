@@ -67,31 +67,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".NETMVC.aspx" />
     <Content Include="About.aspx" />
     <Content Include="AIMachineLearningSolutions.aspx" />
     <Content Include="APIDevelopment.aspx" />
     <Content Include="ApplicationMaintenance.aspx" />
-    <Content Include="CloudDevOpsServices.aspx" />
-    <Content Include="CloudInfrastructureServices.aspx" />
+    <Content Include="AWS.aspx" />
+    <Content Include="Azure.aspx" />
+    <Content Include="BizFlow.aspx" />
+    <Content Include="Blueprism.aspx" />
+    <Content Include="CloudComputing.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="css\style.css" />
-    <Content Include="CustomSoftwareDevelopment.aspx" />
-    <Content Include="CyberSecurityDataProtection.aspx" />
-    <Content Include="DataAnalytics.aspx" />
-    <Content Include="DataAnalyticsBusinessIntelligence.aspx" />
-    <Content Include="DataIntegration.aspx" />
-    <Content Include="DataManagement.aspx" />
-    <Content Include="DataScienceEngineering.aspx" />
+    <Content Include="DataScience.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="ECommerceDevelopment.aspx" />
-    <Content Include="img\aptumlogo.png" />
-    <Content Include="img\hero.jpg" />
-    <Content Include="MobileAppDevelopment.aspx" />
-    <Content Include="UIUXDesign.aspx" />
+    <Content Include="DevOps.aspx" />
+    <Content Include="img\logo.png" />
+    <Content Include="JAVA.aspx" />
+    <Content Include="K2Five.aspx" />
+    <Content Include="MDCRM.aspx" />
+    <Content Include="Nintex.aspx" />
+    <Content Include="Office365.aspx" />
+    <Content Include="PHP.aspx" />
+    <Content Include="PowerApp.aspx" />
+    <Content Include="PowerAutomate.aspx" />
+    <Content Include="PowerBI.aspx" />
+    <Content Include="PowerPlateform.aspx" />
+    <Content Include="PVA.aspx" />
+    <Content Include="Python.aspx" />
+    <Content Include="ReactJs.aspx" />
+    <Content Include="RPA.aspx" />
+    <Content Include="Sharepoint.aspx" />
+    <Content Include="SharepointOnline.aspx" />
+    <Content Include="SPFx.aspx" />
+    <Content Include="SQL.aspx" />
+    <Content Include="UIPath.aspx" />
+    <Content Include="VMWare.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebApplicationDevelopment.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".NETMVC.aspx.cs">
+      <DependentUpon>.NETMVC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include=".NETMVC.aspx.designer.cs">
+      <DependentUpon>.NETMVC.aspx</DependentUpon>
+    </Compile>
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -120,19 +142,40 @@
     <Compile Include="ApplicationMaintenance.aspx.designer.cs">
       <DependentUpon>ApplicationMaintenance.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CloudDevOpsServices.aspx.cs">
-      <DependentUpon>CloudDevOpsServices.aspx</DependentUpon>
+    <Compile Include="AWS.aspx.cs">
+      <DependentUpon>AWS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CloudDevOpsServices.aspx.designer.cs">
-      <DependentUpon>CloudDevOpsServices.aspx</DependentUpon>
+    <Compile Include="AWS.aspx.designer.cs">
+      <DependentUpon>AWS.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CloudInfrastructureServices.aspx.cs">
-      <DependentUpon>CloudInfrastructureServices.aspx</DependentUpon>
+    <Compile Include="Azure.aspx.cs">
+      <DependentUpon>Azure.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CloudInfrastructureServices.aspx.designer.cs">
-      <DependentUpon>CloudInfrastructureServices.aspx</DependentUpon>
+    <Compile Include="Azure.aspx.designer.cs">
+      <DependentUpon>Azure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BizFlow.aspx.cs">
+      <DependentUpon>BizFlow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BizFlow.aspx.designer.cs">
+      <DependentUpon>BizFlow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blueprism.aspx.cs">
+      <DependentUpon>Blueprism.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blueprism.aspx.designer.cs">
+      <DependentUpon>Blueprism.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CloudComputing.aspx.cs">
+      <DependentUpon>CloudComputing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CloudComputing.aspx.designer.cs">
+      <DependentUpon>CloudComputing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -141,54 +184,12 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CustomSoftwareDevelopment.aspx.cs">
-      <DependentUpon>CustomSoftwareDevelopment.aspx</DependentUpon>
+    <Compile Include="DataScience.aspx.cs">
+      <DependentUpon>DataScience.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CustomSoftwareDevelopment.aspx.designer.cs">
-      <DependentUpon>CustomSoftwareDevelopment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CyberSecurityDataProtection.aspx.cs">
-      <DependentUpon>CyberSecurityDataProtection.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CyberSecurityDataProtection.aspx.designer.cs">
-      <DependentUpon>CyberSecurityDataProtection.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataAnalytics.aspx.cs">
-      <DependentUpon>DataAnalytics.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DataAnalytics.aspx.designer.cs">
-      <DependentUpon>DataAnalytics.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataAnalyticsBusinessIntelligence.aspx.cs">
-      <DependentUpon>DataAnalyticsBusinessIntelligence.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DataAnalyticsBusinessIntelligence.aspx.designer.cs">
-      <DependentUpon>DataAnalyticsBusinessIntelligence.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataIntegration.aspx.cs">
-      <DependentUpon>DataIntegration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DataIntegration.aspx.designer.cs">
-      <DependentUpon>DataIntegration.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataManagement.aspx.cs">
-      <DependentUpon>DataManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DataManagement.aspx.designer.cs">
-      <DependentUpon>DataManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataScienceEngineering.aspx.cs">
-      <DependentUpon>DataScienceEngineering.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DataScienceEngineering.aspx.designer.cs">
-      <DependentUpon>DataScienceEngineering.aspx</DependentUpon>
+    <Compile Include="DataScience.aspx.designer.cs">
+      <DependentUpon>DataScience.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -197,21 +198,126 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ECommerceDevelopment.aspx.cs">
-      <DependentUpon>ECommerceDevelopment.aspx</DependentUpon>
+    <Compile Include="DevOps.aspx.cs">
+      <DependentUpon>DevOps.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ECommerceDevelopment.aspx.designer.cs">
-      <DependentUpon>ECommerceDevelopment.aspx</DependentUpon>
+    <Compile Include="DevOps.aspx.designer.cs">
+      <DependentUpon>DevOps.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MobileAppDevelopment.aspx.cs">
-      <DependentUpon>MobileAppDevelopment.aspx</DependentUpon>
+    <Compile Include="JAVA.aspx.cs">
+      <DependentUpon>JAVA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MobileAppDevelopment.aspx.designer.cs">
-      <DependentUpon>MobileAppDevelopment.aspx</DependentUpon>
+    <Compile Include="JAVA.aspx.designer.cs">
+      <DependentUpon>JAVA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="K2Five.aspx.cs">
+      <DependentUpon>K2Five.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="K2Five.aspx.designer.cs">
+      <DependentUpon>K2Five.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MDCRM.aspx.cs">
+      <DependentUpon>MDCRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MDCRM.aspx.designer.cs">
+      <DependentUpon>MDCRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nintex.aspx.cs">
+      <DependentUpon>Nintex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nintex.aspx.designer.cs">
+      <DependentUpon>Nintex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Office365.aspx.cs">
+      <DependentUpon>Office365.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Office365.aspx.designer.cs">
+      <DependentUpon>Office365.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PHP.aspx.cs">
+      <DependentUpon>PHP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PHP.aspx.designer.cs">
+      <DependentUpon>PHP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PowerApp.aspx.cs">
+      <DependentUpon>PowerApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PowerApp.aspx.designer.cs">
+      <DependentUpon>PowerApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PowerAutomate.aspx.cs">
+      <DependentUpon>PowerAutomate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PowerAutomate.aspx.designer.cs">
+      <DependentUpon>PowerAutomate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PowerBI.aspx.cs">
+      <DependentUpon>PowerBI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PowerBI.aspx.designer.cs">
+      <DependentUpon>PowerBI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PowerPlateform.aspx.cs">
+      <DependentUpon>PowerPlateform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PowerPlateform.aspx.designer.cs">
+      <DependentUpon>PowerPlateform.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PVA.aspx.cs">
+      <DependentUpon>PVA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PVA.aspx.designer.cs">
+      <DependentUpon>PVA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Python.aspx.cs">
+      <DependentUpon>Python.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Python.aspx.designer.cs">
+      <DependentUpon>Python.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReactJs.aspx.cs">
+      <DependentUpon>ReactJs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReactJs.aspx.designer.cs">
+      <DependentUpon>ReactJs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPA.aspx.cs">
+      <DependentUpon>RPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RPA.aspx.designer.cs">
+      <DependentUpon>RPA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sharepoint.aspx.cs">
+      <DependentUpon>Sharepoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sharepoint.aspx.designer.cs">
+      <DependentUpon>Sharepoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SharepointOnline.aspx.cs">
+      <DependentUpon>SharepointOnline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SharepointOnline.aspx.designer.cs">
+      <DependentUpon>SharepointOnline.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,20 +325,34 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="UIUXDesign.aspx.cs">
-      <DependentUpon>UIUXDesign.aspx</DependentUpon>
+    <Compile Include="SPFx.aspx.cs">
+      <DependentUpon>SPFx.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UIUXDesign.aspx.designer.cs">
-      <DependentUpon>UIUXDesign.aspx</DependentUpon>
+    <Compile Include="SPFx.aspx.designer.cs">
+      <DependentUpon>SPFx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SQL.aspx.cs">
+      <DependentUpon>SQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SQL.aspx.designer.cs">
+      <DependentUpon>SQL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIPath.aspx.cs">
+      <DependentUpon>UIPath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIPath.aspx.designer.cs">
+      <DependentUpon>UIPath.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
-    <Compile Include="WebApplicationDevelopment.aspx.cs">
-      <DependentUpon>WebApplicationDevelopment.aspx</DependentUpon>
+    <Compile Include="VMWare.aspx.cs">
+      <DependentUpon>VMWare.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebApplicationDevelopment.aspx.designer.cs">
-      <DependentUpon>WebApplicationDevelopment.aspx</DependentUpon>
+    <Compile Include="VMWare.aspx.designer.cs">
+      <DependentUpon>VMWare.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

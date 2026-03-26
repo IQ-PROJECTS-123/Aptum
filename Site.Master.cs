@@ -31,163 +31,77 @@ namespace Aptum
                 StringBuilder desktopNav = new StringBuilder();
                 StringBuilder mobileNav = new StringBuilder();
 
-                string currentUrl = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
-                DataRow[] parents = dt.Select("ParentID IS NULL OR ParentID = 0", "Orderby ASC");
+                DataRow[] parents = dt.Select("ParentID IS NULL OR ParentID = 0");
 
                 foreach (DataRow row in parents)
                 {
                     string id = row["ID"].ToString();
-                    string title = row["Title"].ToString().Trim();
-                    string titleDisplay = title.Replace(" ", "&nbsp;");
-                    string navUrl = row["Navurl"].ToString().Trim();
+                    string title = row["Title"].ToString().Replace(" ", "&nbsp;");
+                    string navUrl = row["Navurl"].ToString();
 
-                    DataRow[] children = dt.Select("ParentID = " + id, "Orderby ASC");
+                    DataRow[] children = dt.Select("ParentID = " + id);
 
-                    string isActive = currentUrl.Contains("/" + navUrl.ToLower())
-                        ? "text-orange-500 font-bold"
-                        : "text-black";
-
-                    bool isMegaMenu =
-                        title.Equals("Services", StringComparison.OrdinalIgnoreCase) ||
-                        title.Equals("Technologies", StringComparison.OrdinalIgnoreCase);
-
-                    // SIMPLE MENU
+                    // ✅ SIMPLE MENU
                     if (children.Length == 0)
                     {
                         desktopNav.Append($@"
                             <li>
-                                <a href='/{navUrl}'
-                                   class='px-4 py-2 text-[15px] font-semibold whitespace-nowrap {isActive} hover:text-orange-500 transition duration-200'>
-                                    {titleDisplay}
-                                </a>
-                            </li>
-                        ");
-
-                        mobileNav.Append($@"
-                            <li>
-                                <a href='/{navUrl}' class='block py-2 text-gray-800 hover:text-orange-500'>
-                                    {title}
-                                </a>
-                            </li>
-                        ");
+                            <a href='/{navUrl}' 
+                            class='px-4 py-2 text-[15px] font-semibold whitespace-nowrap text-black hover:text-orange-500 transition duration-200'>
+                          {title}
+                              </a>
+                           </li>"
+                        );
                     }
                     else
                     {
-                        // MEGA MENU FOR PROGRAMS + TECHNOLOGIES
-                        if (isMegaMenu)
-                        {
-                            int totalItems = children.Length;
-                            int itemsPerColumn = (int)Math.Ceiling(totalItems / 3.0);
+                        // 🔥 MEGA MENU
+                        desktopNav.Append($@"<li class='group'>
+                          <button class='flex items-center gap-1 px-4 py-2 text-[15px] font-semibold text-black hover:text-orange-500'>
+                          {title} <i class='fas fa-chevron-down text-xs'></i>
+                           </button>
 
-                            desktopNav.Append($@"
-                                <li class='relative group'>
-                                    <button type='button'
-                                            class='flex items-center gap-1 px-4 py-2 text-[15px] font-semibold whitespace-nowrap {isActive} hover:text-orange-500 transition duration-200'>
-                                        {titleDisplay} <i class='fas fa-chevron-down text-xs'></i>
-                                    </button>
+                            <!-- FULL WIDTH MEGA MENU -->
+                                <div class='absolute left-1/2 -translate-x-1/2 top-full w-screen hidden group-hover:block bg-white shadow-xl z-50'>
 
-                                    <div class='absolute left-1/2 -translate-x-1/2 top-full mt-2 hidden group-hover:block bg-white rounded-xl shadow-2xl border border-gray-100 p-6 min-w-[750px] z-50'>
-                                        <div class='grid grid-cols-3 gap-6'>
-                            ");
-
-                            for (int col = 0; col < 3; col++)
-                            {
-                                desktopNav.Append("<ul class='space-y-2'>");
-
-                                int startIndex = col * itemsPerColumn;
-                                int endIndex = Math.Min(startIndex + itemsPerColumn, totalItems);
-
-                                for (int i = startIndex; i < endIndex; i++)
-                                {
-                                    string childTitle = children[i]["Title"].ToString().Trim();
-                                    string childUrl = children[i]["Navurl"].ToString().Trim();
-
-                                    desktopNav.Append($@"
-                                        <li>
-                                            <a href='/{childUrl}'
-                                               class='block px-3 py-2 rounded-md text-[14px] text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition duration-200'>
-                                                {childTitle}
-                                            </a>
-                                        </li>
-                                    ");
-                                }
-
-                                desktopNav.Append("</ul>");
-                            }
-
-                            desktopNav.Append(@"
-                                        </div>
-                                    </div>
-                                </li>
-                            ");
-                        }
-                        else
-                        {
-                            // NORMAL DROPDOWN FOR OTHER MENUS
-                            desktopNav.Append($@"
-                                <li class='relative group'>
-                                    <button type='button'
-                                            class='flex items-center gap-1 px-4 py-2 text-[15px] font-semibold whitespace-nowrap {isActive} hover:text-orange-500 transition duration-200'>
-                                        {titleDisplay} <i class='fas fa-chevron-down text-xs'></i>
-                                    </button>
-
-                                    <ul class='absolute hidden group-hover:block bg-white text-gray-800 mt-2 rounded-lg shadow-xl min-w-[220px] z-50'>
-                            ");
-
-                            foreach (DataRow child in children)
-                            {
-                                string childTitle = child["Title"].ToString().Trim();
-                                string childUrl = child["Navurl"].ToString().Trim();
-
-                                desktopNav.Append($@"
-                                    <li>
-                                        <a href='/{childUrl}'
-                                           class='block px-4 py-2 hover:bg-orange-50 hover:text-orange-500 transition'>
-                                            {childTitle}
-                                        </a>
-                                    </li>
-                                ");
-                            }
-
-                            desktopNav.Append("</ul></li>");
-                        }
-
-                        // MOBILE DROPDOWN (same for all)
-                        mobileNav.Append($@"
-                            <li>
-                                <button type='button'
-                                        onclick=""this.nextElementSibling.classList.toggle('hidden')""
-                                        class='w-full text-left py-2 font-medium text-gray-800 hover:text-orange-500'>
-                                    {title}
-                                </button>
-                                <ul class='hidden pl-4'>
-                        ");
+                            <div class='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-4 px-10 py-6'>"
+                            );
 
                         foreach (DataRow child in children)
                         {
-                            string childTitle = child["Title"].ToString().Trim();
-                            string childUrl = child["Navurl"].ToString().Trim();
+                            string childTitle = child["Title"].ToString();
+                            string childUrl = child["Navurl"].ToString();
 
-                            mobileNav.Append($@"
-                                <li>
-                                    <a href='/{childUrl}' class='block py-1 text-gray-700 hover:text-orange-500'>
-                                        {childTitle}
-                                    </a>
-                                </li>
-                            ");
+                            desktopNav.Append($@"
+                              <div>
+                              <a href='/{childUrl}' 
+                             class='flex items-start gap-3 p-3 rounded hover:bg-orange-50 hover:text-orange-500 transition'>
+
+                              <i class='fas fa-code text-orange-500 mt-1'></i>
+
+                                 <span class='text-sm font-medium text-gray-800 leading-tight'>
+                                {childTitle}
+                                   </span>
+
+                               </a>
+                             </div>"
+                            );
                         }
 
-                        mobileNav.Append("</ul></li>");
+                        desktopNav.Append(@"
+                                </div>
+                                    </div>
+                          </li>"
+                        );
                     }
                 }
 
                 _LiteralNavDesktop.Text = desktopNav.ToString();
-                _LiteralNavMobile.Text = mobileNav.ToString();
+                _LiteralNavMobile.Text = "";
             }
             catch (Exception)
             {
                 _LiteralNavDesktop.Text = "<li>Error loading menu</li>";
-                _LiteralNavMobile.Text = "<li>Error loading menu</li>";
             }
         }
     }
